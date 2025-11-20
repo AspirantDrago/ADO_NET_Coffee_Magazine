@@ -54,6 +54,7 @@
             label1 = new Label();
             textMinCostPrice = new TextBox();
             btnConnect = new Button();
+            labelPause = new Label();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewAll).BeginInit();
@@ -85,7 +86,7 @@
             tabControl1.Margin = new Padding(3, 4, 3, 4);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(1011, 452);
+            tabControl1.Size = new Size(754, 452);
             tabControl1.TabIndex = 1;
             // 
             // tabPage1
@@ -95,7 +96,7 @@
             tabPage1.Margin = new Padding(3, 4, 3, 4);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3, 4, 3, 4);
-            tabPage1.Size = new Size(849, 419);
+            tabPage1.Size = new Size(746, 419);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Все виды";
             tabPage1.UseVisualStyleBackColor = true;
@@ -108,7 +109,7 @@
             dataGridViewAll.Margin = new Padding(3, 4, 3, 4);
             dataGridViewAll.Name = "dataGridViewAll";
             dataGridViewAll.RowHeadersWidth = 51;
-            dataGridViewAll.Size = new Size(843, 411);
+            dataGridViewAll.Size = new Size(740, 411);
             dataGridViewAll.TabIndex = 1;
             // 
             // tabPage2
@@ -118,7 +119,7 @@
             tabPage2.Margin = new Padding(3, 4, 3, 4);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3, 4, 3, 4);
-            tabPage2.Size = new Size(849, 419);
+            tabPage2.Size = new Size(746, 419);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Сорта";
             tabPage2.UseVisualStyleBackColor = true;
@@ -131,7 +132,7 @@
             dataGridViewTypes.Margin = new Padding(3, 4, 3, 4);
             dataGridViewTypes.Name = "dataGridViewTypes";
             dataGridViewTypes.RowHeadersWidth = 51;
-            dataGridViewTypes.Size = new Size(843, 411);
+            dataGridViewTypes.Size = new Size(740, 411);
             dataGridViewTypes.TabIndex = 0;
             // 
             // tabPage3
@@ -140,7 +141,7 @@
             tabPage3.Location = new Point(4, 29);
             tabPage3.Margin = new Padding(3, 4, 3, 4);
             tabPage3.Name = "tabPage3";
-            tabPage3.Size = new Size(849, 419);
+            tabPage3.Size = new Size(746, 419);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Арабика";
             tabPage3.UseVisualStyleBackColor = true;
@@ -153,7 +154,7 @@
             dataGridViewArabica.Margin = new Padding(3, 4, 3, 4);
             dataGridViewArabica.Name = "dataGridViewArabica";
             dataGridViewArabica.RowHeadersWidth = 51;
-            dataGridViewArabica.Size = new Size(849, 419);
+            dataGridViewArabica.Size = new Size(746, 419);
             dataGridViewArabica.TabIndex = 0;
             // 
             // tabPage4
@@ -162,7 +163,7 @@
             tabPage4.Location = new Point(4, 29);
             tabPage4.Margin = new Padding(3, 4, 3, 4);
             tabPage4.Name = "tabPage4";
-            tabPage4.Size = new Size(849, 419);
+            tabPage4.Size = new Size(746, 419);
             tabPage4.TabIndex = 3;
             tabPage4.Text = "Робуста";
             tabPage4.UseVisualStyleBackColor = true;
@@ -175,7 +176,7 @@
             dataGridViewRobusta.Margin = new Padding(3, 4, 3, 4);
             dataGridViewRobusta.Name = "dataGridViewRobusta";
             dataGridViewRobusta.RowHeadersWidth = 51;
-            dataGridViewRobusta.Size = new Size(849, 419);
+            dataGridViewRobusta.Size = new Size(746, 419);
             dataGridViewRobusta.TabIndex = 0;
             // 
             // tabPage5
@@ -184,7 +185,7 @@
             tabPage5.Location = new Point(4, 29);
             tabPage5.Margin = new Padding(3, 4, 3, 4);
             tabPage5.Name = "tabPage5";
-            tabPage5.Size = new Size(849, 419);
+            tabPage5.Size = new Size(746, 419);
             tabPage5.TabIndex = 4;
             tabPage5.Text = "Купажи/бленды";
             tabPage5.UseVisualStyleBackColor = true;
@@ -197,7 +198,7 @@
             dataGridViewBlends.Margin = new Padding(3, 4, 3, 4);
             dataGridViewBlends.Name = "dataGridViewBlends";
             dataGridViewBlends.RowHeadersWidth = 51;
-            dataGridViewBlends.Size = new Size(849, 419);
+            dataGridViewBlends.Size = new Size(746, 419);
             dataGridViewBlends.TabIndex = 0;
             // 
             // tabPage6
@@ -206,7 +207,7 @@
             tabPage6.Location = new Point(4, 29);
             tabPage6.Margin = new Padding(3, 4, 3, 4);
             tabPage6.Name = "tabPage6";
-            tabPage6.Size = new Size(849, 419);
+            tabPage6.Size = new Size(746, 419);
             tabPage6.TabIndex = 5;
             tabPage6.Text = "Заканчиваются";
             tabPage6.UseVisualStyleBackColor = true;
@@ -219,7 +220,7 @@
             dataGridViewEnding.Margin = new Padding(3, 4, 3, 4);
             dataGridViewEnding.Name = "dataGridViewEnding";
             dataGridViewEnding.RowHeadersWidth = 51;
-            dataGridViewEnding.Size = new Size(849, 419);
+            dataGridViewEnding.Size = new Size(746, 419);
             dataGridViewEnding.TabIndex = 0;
             // 
             // tabPage7
@@ -228,7 +229,7 @@
             tabPage7.Location = new Point(4, 29);
             tabPage7.Margin = new Padding(3, 4, 3, 4);
             tabPage7.Name = "tabPage7";
-            tabPage7.Size = new Size(1003, 419);
+            tabPage7.Size = new Size(746, 419);
             tabPage7.TabIndex = 6;
             tabPage7.Text = "Статистика";
             tabPage7.UseVisualStyleBackColor = true;
@@ -259,17 +260,17 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel1.Size = new Size(1003, 419);
+            tableLayoutPanel1.Size = new Size(746, 419);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // textCountWithMaxCostPrice
             // 
             textCountWithMaxCostPrice.Dock = DockStyle.Top;
             textCountWithMaxCostPrice.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            textCountWithMaxCostPrice.Location = new Point(504, 193);
+            textCountWithMaxCostPrice.Location = new Point(376, 218);
             textCountWithMaxCostPrice.Name = "textCountWithMaxCostPrice";
             textCountWithMaxCostPrice.ReadOnly = true;
-            textCountWithMaxCostPrice.Size = new Size(496, 34);
+            textCountWithMaxCostPrice.Size = new Size(367, 34);
             textCountWithMaxCostPrice.TabIndex = 9;
             textCountWithMaxCostPrice.TextAlign = HorizontalAlignment.Center;
             // 
@@ -277,10 +278,10 @@
             // 
             textCountWithMinCostPrice.Dock = DockStyle.Top;
             textCountWithMinCostPrice.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            textCountWithMinCostPrice.Location = new Point(504, 143);
+            textCountWithMinCostPrice.Location = new Point(376, 143);
             textCountWithMinCostPrice.Name = "textCountWithMinCostPrice";
             textCountWithMinCostPrice.ReadOnly = true;
-            textCountWithMinCostPrice.Size = new Size(496, 34);
+            textCountWithMinCostPrice.Size = new Size(367, 34);
             textCountWithMinCostPrice.TabIndex = 8;
             textCountWithMinCostPrice.TextAlign = HorizontalAlignment.Center;
             // 
@@ -288,10 +289,10 @@
             // 
             textMiddleCostPrice.Dock = DockStyle.Top;
             textMiddleCostPrice.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            textMiddleCostPrice.Location = new Point(504, 103);
+            textMiddleCostPrice.Location = new Point(376, 103);
             textMiddleCostPrice.Name = "textMiddleCostPrice";
             textMiddleCostPrice.ReadOnly = true;
-            textMiddleCostPrice.Size = new Size(496, 34);
+            textMiddleCostPrice.Size = new Size(367, 34);
             textMiddleCostPrice.TabIndex = 7;
             textMiddleCostPrice.TextAlign = HorizontalAlignment.Center;
             // 
@@ -300,9 +301,9 @@
             label5.AutoSize = true;
             label5.Dock = DockStyle.Right;
             label5.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label5.Location = new Point(10, 190);
+            label5.Location = new Point(59, 215);
             label5.Name = "label5";
-            label5.Size = new Size(488, 50);
+            label5.Size = new Size(311, 75);
             label5.TabIndex = 6;
             label5.Text = "Количество сортов кофе, у которых себестоимость равна максимальной себестоимости";
             label5.TextAlign = ContentAlignment.MiddleRight;
@@ -312,9 +313,9 @@
             label4.AutoSize = true;
             label4.Dock = DockStyle.Right;
             label4.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label4.Location = new Point(10, 140);
+            label4.Location = new Point(61, 140);
             label4.Name = "label4";
-            label4.Size = new Size(488, 50);
+            label4.Size = new Size(309, 75);
             label4.TabIndex = 5;
             label4.Text = "Количество сортов кофе, у которых себестоимость равна минимальной себестоимости";
             label4.TextAlign = ContentAlignment.MiddleRight;
@@ -324,7 +325,7 @@
             label3.AutoSize = true;
             label3.Dock = DockStyle.Right;
             label3.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label3.Location = new Point(246, 100);
+            label3.Location = new Point(118, 100);
             label3.Name = "label3";
             label3.Size = new Size(252, 40);
             label3.TabIndex = 4;
@@ -335,10 +336,10 @@
             // 
             textMaxCostPrice.Dock = DockStyle.Top;
             textMaxCostPrice.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            textMaxCostPrice.Location = new Point(504, 63);
+            textMaxCostPrice.Location = new Point(376, 63);
             textMaxCostPrice.Name = "textMaxCostPrice";
             textMaxCostPrice.ReadOnly = true;
-            textMaxCostPrice.Size = new Size(496, 34);
+            textMaxCostPrice.Size = new Size(367, 34);
             textMaxCostPrice.TabIndex = 3;
             textMaxCostPrice.TextAlign = HorizontalAlignment.Center;
             // 
@@ -347,7 +348,7 @@
             label2.AutoSize = true;
             label2.Dock = DockStyle.Right;
             label2.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label2.Location = new Point(195, 60);
+            label2.Location = new Point(67, 60);
             label2.Name = "label2";
             label2.Size = new Size(303, 40);
             label2.TabIndex = 2;
@@ -359,7 +360,7 @@
             label1.AutoSize = true;
             label1.Dock = DockStyle.Right;
             label1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label1.Location = new Point(201, 20);
+            label1.Location = new Point(73, 20);
             label1.Name = "label1";
             label1.Size = new Size(297, 40);
             label1.TabIndex = 0;
@@ -370,17 +371,17 @@
             // 
             textMinCostPrice.Dock = DockStyle.Top;
             textMinCostPrice.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            textMinCostPrice.Location = new Point(504, 23);
+            textMinCostPrice.Location = new Point(376, 23);
             textMinCostPrice.Name = "textMinCostPrice";
             textMinCostPrice.ReadOnly = true;
-            textMinCostPrice.Size = new Size(496, 34);
+            textMinCostPrice.Size = new Size(367, 34);
             textMinCostPrice.TabIndex = 1;
             textMinCostPrice.TextAlign = HorizontalAlignment.Center;
             // 
             // btnConnect
             // 
             btnConnect.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnConnect.Location = new Point(873, -1);
+            btnConnect.Location = new Point(616, -1);
             btnConnect.Margin = new Padding(3, 4, 3, 4);
             btnConnect.Name = "btnConnect";
             btnConnect.Size = new Size(133, 31);
@@ -389,11 +390,23 @@
             btnConnect.UseVisualStyleBackColor = true;
             btnConnect.Click += btnConnect_Click;
             // 
+            // labelPause
+            // 
+            labelPause.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            labelPause.AutoSize = true;
+            labelPause.Location = new Point(326, 216);
+            labelPause.Name = "labelPause";
+            labelPause.Size = new Size(103, 20);
+            labelPause.TabIndex = 5;
+            labelPause.Text = "ОЖИДАНИЕ...";
+            labelPause.Visible = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1011, 452);
+            ClientSize = new Size(754, 452);
+            Controls.Add(labelPause);
             Controls.Add(btnConnect);
             Controls.Add(tabControl1);
             Margin = new Padding(3, 4, 3, 4);
@@ -418,6 +431,7 @@
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -448,5 +462,6 @@
         private TextBox textMiddleCostPrice;
         private TextBox textCountWithMinCostPrice;
         private TextBox textCountWithMaxCostPrice;
+        private Label labelPause;
     }
 }

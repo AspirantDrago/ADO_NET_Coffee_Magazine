@@ -2,6 +2,7 @@ using Npgsql;
 using System.Configuration;
 using System.Data;
 using System.Data.Common;
+using System.Windows.Forms;
 
 namespace ADO_NET_Coffee_Magazine
 {
@@ -86,7 +87,6 @@ namespace ADO_NET_Coffee_Magazine
         public Form1()
         {
             InitializeComponent();
-            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -131,8 +131,9 @@ namespace ADO_NET_Coffee_Magazine
             conn?.Close();
         }
 
-        private void btnConnect_Click(object sender, EventArgs e)
+        private async void btnConnect_Click(object sender, EventArgs e)
         {
+            labelPause.Visible = true;
             dataGridViewAll.DataSource = null;
             dataGridViewArabica.DataSource = null;
             dataGridViewRobusta.DataSource = null;
@@ -147,33 +148,43 @@ namespace ADO_NET_Coffee_Magazine
             try
             {
                 ds = new DataSet();
-                adapter.Fill(ds);
-                dataGridViewAll.DataSource = ds.Tables["Coffees"];
-                dataGridViewTypes.DataSource = ds.Tables["Types"];
+                await Task.Run(() =>
+                {
+                    adapter.Fill(ds);
+                    this.Invoke(new Action(() => {
+                        dataGridViewAll.DataSource = ds.Tables["Coffees"];
+                        dataGridViewTypes.DataSource = ds.Tables["Types"];
 
-                dvm = new DataViewManager(ds);
+                        dvm = new DataViewManager(ds);
 
-                dvm.DataViewSettings["Coffees"].RowFilter = "[Вид кофе] = 'арабика'";
-                dataGridViewArabica.DataSource = dvm.CreateDataView(ds.Tables["Coffees"]);
+                        dvm.DataViewSettings["Coffees"].RowFilter = "[Вид кофе] = 'арабика'";
+                        dataGridViewArabica.DataSource = dvm.CreateDataView(ds.Tables["Coffees"]);
 
-                dvm.DataViewSettings["Coffees"].RowFilter = "[Вид кофе] = 'робуста'";
-                dataGridViewRobusta.DataSource = dvm.CreateDataView(ds.Tables["Coffees"]);
+                        dvm.DataViewSettings["Coffees"].RowFilter = "[Вид кофе] = 'робуста'";
+                        dataGridViewRobusta.DataSource = dvm.CreateDataView(ds.Tables["Coffees"]);
 
-                dvm.DataViewSettings["Coffees"].RowFilter = "[Вид кофе] = 'купаж/бленд'";
-                dataGridViewBlends.DataSource = dvm.CreateDataView(ds.Tables["Coffees"]);
+                        dvm.DataViewSettings["Coffees"].RowFilter = "[Вид кофе] = 'купаж/бленд'";
+                        dataGridViewBlends.DataSource = dvm.CreateDataView(ds.Tables["Coffees"]);
 
-                dvm.DataViewSettings["Coffees"].RowFilter = "[Количество грамм] <= 200";
-                dataGridViewEnding.DataSource = dvm.CreateDataView(ds.Tables["Coffees"]);
+                        dvm.DataViewSettings["Coffees"].RowFilter = "[Количество грамм] <= 200";
+                        dataGridViewEnding.DataSource = dvm.CreateDataView(ds.Tables["Coffees"]);
 
-                textMinCostPrice.Text = ds.Tables["CostPriceStats"].Rows[0]["Value"].ToString();
-                textMaxCostPrice.Text = ds.Tables["CostPriceStats"].Rows[1]["Value"].ToString();
-                textMiddleCostPrice.Text = ds.Tables["CostPriceStats"].Rows[2]["Value"].ToString();
-                textCountWithMinCostPrice.Text = ds.Tables["CostPriceStats"].Rows[0]["Count"].ToString();
-                textCountWithMaxCostPrice.Text = ds.Tables["CostPriceStats"].Rows[1]["Count"].ToString();
+                        textMinCostPrice.Text = ds.Tables["CostPriceStats"].Rows[0]["Value"].ToString();
+                        textMaxCostPrice.Text = ds.Tables["CostPriceStats"].Rows[1]["Value"].ToString();
+                        textMiddleCostPrice.Text = ds.Tables["CostPriceStats"].Rows[2]["Value"].ToString();
+                        textCountWithMinCostPrice.Text = ds.Tables["CostPriceStats"].Rows[0]["Count"].ToString();
+                        textCountWithMaxCostPrice.Text = ds.Tables["CostPriceStats"].Rows[1]["Count"].ToString();
+
+                    }));
+                });
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                labelPause.Visible = false;
             }
         }
     }
